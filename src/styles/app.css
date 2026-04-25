@@ -1419,6 +1419,9 @@ main {
   gap: 16px;
   width: 100%;
   padding: 18px 20px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .contact-social-strip h3 {
@@ -1429,38 +1432,44 @@ main {
 }
 
 .contact-social-strip__links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  align-items: stretch;
+  justify-content: stretch;
   gap: 10px;
   width: 100%;
 }
 
 .contact-social-strip__links a {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 0 0 auto;
-  gap: 10px;
-  min-height: 42px;
-  width: auto;
-  padding: 0 14px;
-  border-radius: 999px;
-  color: rgba(246, 251, 255, 0.78);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 12px;
+  min-height: 116px;
+  width: 100%;
+  padding: 18px 14px;
+  border-radius: 22px;
+  color: rgba(246, 251, 255, 0.86);
+  background: transparent;
+  border: 0;
   transition:
     transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
     background 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.contact-social-strip__links a svg {
+  font-size: 1.3rem;
+}
+
+.contact-social-strip__links a span {
+  text-align: center;
+}
+
 .contact-social-strip__links a:hover {
   color: #8fe6ff;
-  border-color: rgba(143, 230, 255, 0.18);
-  background: rgba(66, 183, 255, 0.08);
+  background: rgba(66, 183, 255, 0.04);
   transform: translateY(-2px);
 }
 
@@ -4521,6 +4530,11 @@ body.mobile-menu-open {
     padding: 18px !important;
   }
 
+  .contact-social-strip__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .contact-form__grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -4535,6 +4549,14 @@ body.mobile-menu-open {
   .mobile-nav-drawer__link,
   .contact-social-strip__links a {
     font-size: 16px;
+  }
+
+  .contact-social-strip__links a {
+    min-height: 108px;
+    aspect-ratio: 1 / 1;
+    padding: 14px 10px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .contact-field input,
