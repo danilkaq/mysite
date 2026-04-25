@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "magicui:mcp": "mcp",
+    "reactbits:mcp": "npx reactbits-dev-mcp-server"
   },
   "dependencies": {
     "framer-motion": "^12.9.1",
@@ -16,7 +18,9 @@
     "swiper": "^11.2.6"
   },
   "devDependencies": {
+    "@magicuidesign/mcp": "^2.0.0",
     "@vitejs/plugin-react": "^4.5.0",
+    "reactbits-dev-mcp-server": "^1.1.2",
     "vite": "^6.3.2"
   }
 }

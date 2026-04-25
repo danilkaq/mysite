@@ -3,7 +3,7 @@
 :root {
   font-family: 'Outfit', sans-serif;
   color: #f6fbff;
-  background: #05070b;
+  background: #241f20;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,9 +24,13 @@ body,
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at top, rgba(58, 169, 255, 0.16), transparent 28%),
-    linear-gradient(180deg, #06080d 0%, #020305 100%);
+  background: #241f20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
 }
 
 a {

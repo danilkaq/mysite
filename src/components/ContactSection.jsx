@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaInstagram, FaLocationDot, FaTelegram, FaVk, FaWhatsapp } from 'react-icons/fa6';
+import { FaCheck, FaEnvelope, FaInstagram, FaTelegram, FaVk, FaWhatsapp } from 'react-icons/fa6';
 import SectionHeading from './SectionHeading';
 import { contacts } from '../data/content';
+import { panelRevealVariants, sectionContainerVariants, viewportOnce } from '../lib/motion';
 
 const icons = {
   Telegram: FaTelegram,
@@ -12,56 +14,218 @@ const icons = {
 };
 
 function ContactSection() {
-  return (
-    <section className="content-section contact-section" id="contacts">
-      <SectionHeading title="Соцсети и контакты" text="Открыты к новым проектам и сотрудничеству." />
+  const socialContacts = contacts.filter((item) => item.label !== 'Email');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    venue: '',
+    eventType: '',
+    date: '',
+    guests: '',
+    budget: '',
+    message: '',
+    consent: false,
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-      <div className="contact-layout">
+  const handleChange = (event) => {
+    const { name, type, value, checked } = event.target;
+
+    setFormData((current) => ({
+      ...current,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmitted(true);
+  };
+
+  return (
+    <section className="content-section contact-section content-section--magic content-section--contacts" id="contacts">
+      <SectionHeading title="Оставьте заявку" />
+
+      <motion.div
+        className="contact-stack"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={sectionContainerVariants}
+      >
         <motion.div
-          className="glass-card contact-card"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.45 }}
+          className="glass-card contact-card contact-card--form contact-card--accent contact-card--aurora magic-card magic-card--border-flow"
+          variants={panelRevealVariants}
+          custom={0}
         >
-          <h3>Свяжитесь с ET ART</h3>
-          <div className="contact-links">
-            {contacts.map((item) => {
+          <span className="magic-card__beam" aria-hidden="true" />
+
+          <div className="contact-form-shell">
+            {isSubmitted ? (
+              <div className="contact-success">
+                <span className="contact-success__icon">
+                  <FaCheck />
+                </span>
+                <strong>Заявка отправлена</strong>
+                <p>Скоро с вами свяжутся.</p>
+              </div>
+            ) : (
+              <motion.form className="contact-form" onSubmit={handleSubmit}>
+                <div className="contact-form__grid">
+                  <label className="contact-field">
+                    <span>ФИО</span>
+                    <input
+                      name="fullName"
+                      type="text"
+                      placeholder="Иван Иванов"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+
+                  <label className="contact-field">
+                    <span>Почта</span>
+                    <input
+                      name="email"
+                      type="email"
+                      placeholder="hello@mail.ru"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+
+                  <label className="contact-field">
+                    <span>Телефон / Telegram</span>
+                    <input
+                      name="phone"
+                      type="text"
+                      placeholder="+7 (...) / @username"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+
+                  <label className="contact-field">
+                    <span>Формат мероприятия</span>
+                    <input
+                      name="eventType"
+                      type="text"
+                      placeholder="Форум, концерт, бренд-зона"
+                      value={formData.eventType}
+                      onChange={handleChange}
+                    />
+                  </label>
+
+                  <label className="contact-field contact-field--wide">
+                    <span>Адрес / площадка</span>
+                    <input
+                      name="venue"
+                      type="text"
+                      placeholder="Город, площадка или точный адрес"
+                      value={formData.venue}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+
+                  <label className="contact-field">
+                    <span>Дата</span>
+                    <input
+                      name="date"
+                      type="text"
+                      placeholder="Май 2026"
+                      value={formData.date}
+                      onChange={handleChange}
+                    />
+                  </label>
+
+                  <label className="contact-field">
+                    <span>Кол-во гостей</span>
+                    <input
+                      name="guests"
+                      type="text"
+                      placeholder="Например: 150"
+                      value={formData.guests}
+                      onChange={handleChange}
+                    />
+                  </label>
+
+                  <label className="contact-field contact-field--wide">
+                    <span>Бюджет</span>
+                    <input
+                      name="budget"
+                      type="text"
+                      placeholder="Например: от 200 000 ₽"
+                      value={formData.budget}
+                      onChange={handleChange}
+                    />
+                  </label>
+                </div>
+
+                <label className="contact-field contact-field--message">
+                  <span>Кратко о задаче</span>
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="Площадка, количество гостей, нужный свет, звук, экраны, сцена и другие детали."
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
+                </label>
+
+                <label className="contact-field contact-field--checkbox">
+                  <input
+                    name="consent"
+                    type="checkbox"
+                    checked={formData.consent}
+                    onChange={handleChange}
+                    required
+                  />
+                  <span>Согласен на обработку персональных данных для обработки заявки</span>
+                </label>
+
+                <div className="contact-form__footer">
+                  <p>После нажатия откроется готовое письмо с уже собранной заявкой.</p>
+                  <motion.button
+                    className="button button--primary contact-form__submit"
+                    type="submit"
+                    whileHover={{ y: -3, scale: 1.01 }}
+                    whileTap={{ y: -1, scale: 0.985 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                  >
+                    Отправить заявку
+                  </motion.button>
+                </div>
+              </motion.form>
+            )}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="glass-card contact-social-strip magic-card magic-card--spotlight"
+          variants={panelRevealVariants}
+          custom={1}
+        >
+          <span className="magic-card__beam" aria-hidden="true" />
+          <h3>Наши соцсети</h3>
+          <div className="contact-social-strip__links">
+            {socialContacts.map((item) => {
               const Icon = icons[item.label];
 
               return (
                 <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
-                  <span className="icon-wrap">
-                    <Icon />
-                  </span>
-                  <div>
-                    <strong>{item.label}</strong>
-                    <span>{item.value}</span>
-                  </div>
+                  <Icon />
+                  <span>{item.label}</span>
                 </a>
               );
             })}
           </div>
         </motion.div>
-
-        <motion.div
-          className="glass-card contact-card contact-card--accent"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.45, delay: 0.06 }}
-        >
-          <h3>Техническое сопровождение мероприятий</h3>
-          <p>Частные события, брендовые запуски, форумы, концерты и выездные площадки.</p>
-          <div className="contact-address">
-            <FaLocationDot />
-            <span>La Aion, Нижний Новгород</span>
-          </div>
-          <a className="button button--primary" href="mailto:hello@etart.pro">
-            Запросить смету
-          </a>
-        </motion.div>
-      </div>
+      </motion.div>
 
       <footer className="site-footer">
         <img className="footer-logo-blue" src="/assets/etart-logo.png" alt="ET ART logo" />

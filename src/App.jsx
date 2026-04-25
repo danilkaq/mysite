@@ -1,6 +1,9 @@
+import { MotionConfig } from 'framer-motion';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import HeroStatsSection from './components/HeroStatsSection';
 import AboutSection from './components/AboutSection';
+import WhyUsSection from './components/WhyUsSection';
 import ProjectsSection from './components/ProjectsSection';
 import VisualizationSection from './components/VisualizationSection';
 import EquipmentSection from './components/EquipmentSection';
@@ -12,20 +15,24 @@ import './styles/app.css';
 
 function App() {
   return (
-    <div className="app-shell">
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <VisualizationSection />
-        <EquipmentSection />
-        <PackagesSection />
-        <ReviewsSection />
-        <PartnersSection />
-        <ContactSection />
-      </main>
-    </div>
+    <MotionConfig reducedMotion="always">
+      <div className="app-shell">
+        <Header />
+        <main>
+          <HeroSection />
+          <HeroStatsSection />
+          <AboutSection />
+          <WhyUsSection />
+          <ProjectsSection />
+          <VisualizationSection />
+          <EquipmentSection />
+          <PackagesSection />
+          <ReviewsSection />
+          <PartnersSection />
+          <ContactSection />
+        </main>
+      </div>
+    </MotionConfig>
   );
 }
 

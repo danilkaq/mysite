@@ -1,37 +1,61 @@
 import { motion } from 'framer-motion';
-import SectionHeading from './SectionHeading';
-import { advantages } from '../data/content';
+import { cardRevealVariants, headingVariants, sectionContainerVariants, viewportOnce } from '../lib/motion';
+
+const aboutSegments = [
+  {
+    title: 'B2C',
+    text: 'Частные мероприятия любых форматов',
+    accent: 'about-segments__card--private',
+  },
+  {
+    title: 'B2B',
+    text: 'Деловые мероприятия, корпоративы, выставки, конференции',
+    accent: 'about-segments__card--business',
+  },
+  {
+    title: 'B2G',
+    text: 'Официальные мероприятия, форумы, фестивали, городские праздники',
+    accent: 'about-segments__card--public',
+  },
+];
 
 function AboutSection() {
   return (
-    <section className="content-section" id="about">
-      <SectionHeading
-        title="Кто мы?"
-        text="Современная event-tech команда. ET ART сопровождает мероприятия под ключ: от визуальной идеи и подбора оборудования до точной реализации на площадке."
-      />
+    <section className="content-section content-section--about" id="about">
+      <motion.div
+        className="section-heading section-heading--left about-heading"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={headingVariants}
+      >
+        <h2>Кто мы</h2>
+        <p>
+          Производственно-творческая компания &quot;ETART&quot; — это сплоченная команда профессионалов, имеющая за
+          своей спиной многолетний опыт в сфере ивента, технического менеджмента, рекламы, дизайна, проектирования и
+          производства декораций, создания брендинга.
+        </p>
+      </motion.div>
 
-      <div className="advantage-grid">
-        {advantages.map((item, index) => {
-          const Icon = item.icon;
-
-          return (
-            <motion.article
-              key={item.title}
-              className="glass-card advantage-card"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.45, delay: index * 0.06 }}
-            >
-              <span className="icon-wrap">
-                <Icon />
-              </span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </motion.article>
-          );
-        })}
-      </div>
+      <motion.div
+        className="about-segments"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={sectionContainerVariants}
+      >
+        {aboutSegments.map((item, index) => (
+          <motion.article
+            key={item.title}
+            className={`about-segments__card ${item.accent}`}
+            variants={cardRevealVariants}
+            custom={index}
+          >
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </motion.article>
+        ))}
+      </motion.div>
     </section>
   );
 }
