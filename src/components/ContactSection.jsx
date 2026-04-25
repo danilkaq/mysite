@@ -227,6 +227,38 @@ function ContactSection() {
         </motion.div>
       </motion.div>
 
+      <motion.div
+        className="glass-card site-contact-bar magic-card magic-card--spotlight"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={panelRevealVariants}
+        custom={2}
+      >
+        <span className="magic-card__beam" aria-hidden="true" />
+        <div className="site-contact-bar__intro">
+          <span className="site-contact-bar__eyebrow">Контакты ET ART</span>
+          <h3>Связаться с нами</h3>
+        </div>
+
+        <div className="site-contact-bar__grid">
+          <div className="site-contact-bar__item">
+            <span className="site-contact-bar__label">Телефон</span>
+            <a href="tel:2828685">2828685</a>
+          </div>
+
+          <div className="site-contact-bar__item">
+            <span className="site-contact-bar__label">Почта</span>
+            <a href="mailto:2828685@etart.ru">2828685@etart.ru</a>
+          </div>
+
+          <div className="site-contact-bar__item">
+            <span className="site-contact-bar__label">Адрес</span>
+            <p>Адрес офиса и склада: 60300 Россия, Нижний Новгород, Березовская.</p>
+          </div>
+        </div>
+      </motion.div>
+
       <footer className="site-footer">
         <img className="footer-logo-blue" src="/assets/etart-logo.png" alt="ET ART logo" />
         <p>ET ART</p>
