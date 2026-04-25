@@ -222,7 +222,7 @@ function ContactSection() {
 
           <div className="site-contact-bar__item">
             <span className="site-contact-bar__label">Адрес</span>
-            <p>Адрес офиса и склада: 60300 Россия, Нижний Новгород, Березовская.</p>
+            <p>Адрес офиса и склада: 60300 Россия, Нижний Новгород, Березовская 3а.</p>
           </div>
         </div>
       </motion.div>
