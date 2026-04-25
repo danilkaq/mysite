@@ -219,21 +219,6 @@ function ContactSection() {
           <h3>Связаться с нами</h3>
         </div>
 
-        <div className="contact-social-strip">
-          <div className="contact-social-strip__links">
-            {socialContacts.map((item) => {
-              const Icon = icons[item.label];
-
-              return (
-                <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
-                  <Icon />
-                  <span>{item.label}</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-
         <div className="site-contact-bar__grid">
           <div className="site-contact-bar__item">
             <span className="site-contact-bar__label">Телефон</span>
@@ -249,6 +234,29 @@ function ContactSection() {
             <span className="site-contact-bar__label">Адрес</span>
             <p>Адрес офиса и склада: 60300 Россия, Нижний Новгород, Березовская 3а.</p>
           </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="glass-card contact-social-strip magic-card magic-card--spotlight"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={panelRevealVariants}
+        custom={3}
+      >
+        <span className="magic-card__beam" aria-hidden="true" />
+        <div className="contact-social-strip__links">
+          {socialContacts.map((item) => {
+            const Icon = icons[item.label];
+
+            return (
+              <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
+                <Icon />
+                <span>{item.label}</span>
+              </a>
+            );
+          })}
         </div>
       </motion.div>
 
