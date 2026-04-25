@@ -1,10 +1,20 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCheck } from 'react-icons/fa6';
+import { FaCheck, FaEnvelope, FaInstagram, FaTelegram, FaVk, FaWhatsapp } from 'react-icons/fa6';
 import SectionHeading from './SectionHeading';
+import { contacts } from '../data/content';
 import { panelRevealVariants, sectionContainerVariants, viewportOnce } from '../lib/motion';
 
+const icons = {
+  Telegram: FaTelegram,
+  Instagram: FaInstagram,
+  VK: FaVk,
+  WhatsApp: FaWhatsapp,
+  Email: FaEnvelope,
+};
+
 function ContactSection() {
+  const socialContacts = contacts.filter((item) => item.label !== 'Email');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -207,6 +217,21 @@ function ContactSection() {
         <span className="magic-card__beam" aria-hidden="true" />
         <div className="site-contact-bar__intro">
           <h3>Связаться с нами</h3>
+        </div>
+
+        <div className="contact-social-strip">
+          <div className="contact-social-strip__links">
+            {socialContacts.map((item) => {
+              const Icon = icons[item.label];
+
+              return (
+                <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
+                  <Icon />
+                  <span>{item.label}</span>
+                </a>
+              );
+            })}
+          </div>
         </div>
 
         <div className="site-contact-bar__grid">
