@@ -3878,14 +3878,7 @@ body.mobile-menu-open {
   }
 
   .landing-hero__body {
-    width: 100%;
-    max-width: 24ch;
-    margin: 24px auto 0;
-    color: rgba(247, 251, 255, 0.82);
-    font-size: 1.04rem;
-    line-height: 1.5;
-    text-align: center;
-    text-wrap: balance;
+    display: none;
   }
 
   .landing-hero__tagline {
