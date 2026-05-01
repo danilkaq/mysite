@@ -10,11 +10,15 @@ function HeroSection() {
 
             <div className="landing-hero__divider" aria-hidden="true" />
 
-            <h1 className="landing-hero__title">КОМПЛЕКСНОЕ ТЕХНИЧЕСКОЕ ОБЕСПЕЧЕНИЕ МЕРОПРИЯТИЙ</h1>
+            <h1 className="landing-hero__title">
+              <span className="landing-hero__title-line">Комплексное обеспечение</span>
+              <span className="landing-hero__title-line">мероприятий</span>
+            </h1>
           </div>
 
           <p className="landing-hero__body">
-            Техническое обеспечение мероприятий: от проектирования до полной реализации под ключ.
+            Спроектируем, визуализируем в 3D, подберем оптимальное оборудование, создадим проект по брендингу и
+            декору, возьмем на себя все вопросы по проектному менеджменту, смонтируем по таймингу, реализуем проект.
           </p>
 
           <p className="landing-hero__tagline">ВАШЕ СПОКОЙСТВИЕ - НАША РАБОТА</p>

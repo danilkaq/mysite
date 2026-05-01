@@ -3573,6 +3573,11 @@ body.mobile-menu-open {
   text-align: left;
 }
 
+.landing-hero__title-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .landing-hero__body {
   width: min(100%, 1360px);
   margin: 68px 0 0;
