@@ -21,6 +21,10 @@ function HeroSection() {
             декору, возьмем на себя все вопросы по проектному менеджменту, смонтируем по таймингу, реализуем проект.
           </p>
 
+          <p className="landing-hero__body-mobile">
+            3D-визуализация, подбор оборудования, брендинг, декор и реализация проекта под ключ.
+          </p>
+
           <p className="landing-hero__tagline">ВАШЕ СПОКОЙСТВИЕ - НАША РАБОТА</p>
 
           <div className="landing-hero__actions">

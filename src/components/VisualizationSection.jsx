@@ -119,7 +119,7 @@ function VisualizationSection() {
       </motion.div>
 
       <div className="section-action">
-        <a className="button button--ghost button--more-photos" href="#contacts">
+        <a className="button button--ghost button--more-photos" href="/portfolio">
           {'Больше фото'}
         </a>
       </div>

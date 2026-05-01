@@ -16,16 +16,11 @@ const icons = {
 function ContactSection() {
   const socialContacts = contacts.filter((item) => item.label !== 'Email');
   const [formData, setFormData] = useState({
-    fullName: '',
     email: '',
-    phone: '',
-    venue: '',
-    eventType: '',
     date: '',
     guests: '',
     budget: '',
     message: '',
-    consent: false,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -74,59 +69,12 @@ function ContactSection() {
               <motion.form className="contact-form" onSubmit={handleSubmit}>
                 <div className="contact-form__grid">
                   <label className="contact-field">
-                    <span>ФИО</span>
-                    <input
-                      name="fullName"
-                      type="text"
-                      placeholder="Иван Иванов"
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </label>
-
-                  <label className="contact-field">
                     <span>Почта</span>
                     <input
                       name="email"
                       type="email"
                       placeholder="hello@mail.ru"
                       value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </label>
-
-                  <label className="contact-field">
-                    <span>Телефон / Telegram</span>
-                    <input
-                      name="phone"
-                      type="text"
-                      placeholder="+7 (...) / @username"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                    />
-                  </label>
-
-                  <label className="contact-field">
-                    <span>Формат мероприятия</span>
-                    <input
-                      name="eventType"
-                      type="text"
-                      placeholder="Форум, концерт, бренд-зона"
-                      value={formData.eventType}
-                      onChange={handleChange}
-                    />
-                  </label>
-
-                  <label className="contact-field contact-field--wide">
-                    <span>Адрес / площадка</span>
-                    <input
-                      name="venue"
-                      type="text"
-                      placeholder="Город, площадка или точный адрес"
-                      value={formData.venue}
                       onChange={handleChange}
                       required
                     />
@@ -175,17 +123,6 @@ function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                   />
-                </label>
-
-                <label className="contact-field contact-field--checkbox">
-                  <input
-                    name="consent"
-                    type="checkbox"
-                    checked={formData.consent}
-                    onChange={handleChange}
-                    required
-                  />
-                  <span>Согласен на обработку персональных данных для обработки заявки</span>
                 </label>
 
                 <div className="contact-form__footer">
