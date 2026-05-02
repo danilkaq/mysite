@@ -38,7 +38,7 @@ export const quickMenu = [
   { label: 'Визуализация', href: '#visualization' },
   { label: 'Оборудование', href: '#equipment' },
   { label: 'Наборы света и звука', href: '#packages' },
-  { label: 'Отзывы', href: '#reviews' },
+  { label: 'С кем сотрудничаем', href: '#partners' },
   { label: 'Контакты', href: '#contacts' },
 ];
 
@@ -202,12 +202,28 @@ export const reviews = [
 ];
 
 export const partners = [
-  'Meridian Hall',
-  'Nova Brand',
-  'Skyline Events',
-  'Velour Group',
-  'Atlas Media',
-  'Pulse Agency',
+  {
+    name: 'Газпром',
+    image: '/assets/partners/gazprom.svg',
+    className: 'partner-tile--wide',
+  },
+  {
+    name: 'Сбер',
+    image: '/assets/partners/sber.svg',
+  },
+  {
+    name: 'Росатом',
+    image: '/assets/partners/rosatom.svg',
+  },
+  {
+    name: 'Высшая школа экономики',
+    image: '/assets/partners/hse.svg',
+  },
+  {
+    name: 'ITESCO',
+    image: '/assets/partners/itesco.svg',
+    className: 'partner-tile--wide',
+  },
 ];
 
 export const contacts = [

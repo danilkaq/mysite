@@ -1010,7 +1010,6 @@ main {
 }
 
 .content-section--packages,
-.content-section--reviews,
 .content-section--partners,
 .content-section--contacts {
   width: 100%;
@@ -1027,11 +1026,9 @@ main {
 }
 
 .content-section--packages .section-heading,
-.content-section--reviews .section-heading,
 .content-section--partners .section-heading,
 .content-section--contacts .section-heading,
 .content-section--packages .packages-grid,
-.content-section--reviews .reviews-slider,
 .content-section--partners .partners-grid,
 .content-section--contacts .contact-layout {
   width: 100%;
@@ -1190,19 +1187,45 @@ main {
 }
 
 .partners-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 22px;
 }
 
 .partner-tile {
-  min-height: 126px;
-  display: grid;
-  place-items: center;
-  padding: 20px;
+  width: min(100%, 270px);
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 24px;
   color: rgba(246, 251, 255, 0.84);
+  overflow: hidden;
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-tile--wide {
+  width: min(100%, 420px);
+}
+
+.partner-tile__logo {
+  width: 100%;
+  max-width: 220px;
+  max-height: 92px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  filter: saturate(1.02);
+}
+
+.partner-tile--wide .partner-tile__logo {
+  max-width: 320px;
+  max-height: 106px;
 }
 
 .partner-tile:hover {
@@ -1662,11 +1685,6 @@ main {
   .magic-spotlight-grid,
   .equipment-grid,
   .packages-grid,
-  .partners-grid,
-  .contact-layout {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .contact-social-strip__links {
     justify-content: flex-start;
   }
@@ -1762,11 +1780,6 @@ main {
   .advantage-grid,
   .equipment-grid,
   .packages-grid,
-  .partners-grid,
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
   .slider-arrow {
     display: none;
   }
@@ -4550,10 +4563,28 @@ body.mobile-menu-open {
     margin-top: 16px;
   }
 
+  .partners-grid {
+    gap: 16px !important;
+  }
+
   .partner-tile {
-    min-height: 104px;
-    font-size: 0.98rem;
-    text-align: center;
+    width: 100%;
+    min-height: 132px;
+    padding: 22px 18px !important;
+  }
+
+  .partner-tile--wide {
+    width: 100%;
+  }
+
+  .partner-tile__logo {
+    max-width: 192px;
+    max-height: 72px;
+  }
+
+  .partner-tile--wide .partner-tile__logo {
+    max-width: 230px;
+    max-height: 80px;
   }
 
   .contact-section {

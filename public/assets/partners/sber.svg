@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Сбер</title>
+  <defs>
+    <linearGradient id="sber-gradient" x1="20%" y1="85%" x2="85%" y2="20%">
+      <stop offset="0%" stop-color="#ffe000"/>
+      <stop offset="45%" stop-color="#2dc86f"/>
+      <stop offset="100%" stop-color="#0b8be6"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="36" fill="none"/>
+  <circle cx="120" cy="120" r="74" fill="none" stroke="url(#sber-gradient)" stroke-width="18" stroke-dasharray="390 110" transform="rotate(-42 120 120)"/>
+  <path d="M87 120l21 21 47-49" fill="none" stroke="#1fb34e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
