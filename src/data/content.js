@@ -205,7 +205,6 @@ export const partners = [
   {
     name: 'Газпром',
     image: '/assets/partners/gazprom.svg',
-    className: 'partner-tile--wide',
   },
   {
     name: 'Сбер',
@@ -222,7 +221,6 @@ export const partners = [
   {
     name: 'ITESCO',
     image: '/assets/partners/itesco.svg',
-    className: 'partner-tile--wide',
   },
 ];
 

@@ -1187,15 +1187,15 @@ main {
 }
 
 .partners-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
   justify-content: center;
   align-items: stretch;
   gap: 22px;
 }
 
 .partner-tile {
-  width: min(100%, 270px);
+  width: 220px;
   min-height: 176px;
   display: flex;
   align-items: center;
@@ -1209,23 +1209,14 @@ main {
     color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.partner-tile--wide {
-  width: min(100%, 420px);
-}
-
 .partner-tile__logo {
   width: 100%;
-  max-width: 220px;
-  max-height: 92px;
+  max-width: 168px;
+  max-height: 74px;
   object-fit: contain;
   object-position: center;
   display: block;
   filter: saturate(1.02);
-}
-
-.partner-tile--wide .partner-tile__logo {
-  max-width: 320px;
-  max-height: 106px;
 }
 
 .partner-tile:hover {
@@ -4573,18 +4564,9 @@ body.mobile-menu-open {
     padding: 22px 18px !important;
   }
 
-  .partner-tile--wide {
-    width: 100%;
-  }
-
   .partner-tile__logo {
-    max-width: 192px;
+    max-width: 148px;
     max-height: 72px;
-  }
-
-  .partner-tile--wide .partner-tile__logo {
-    max-width: 230px;
-    max-height: 80px;
   }
 
   .contact-section {
