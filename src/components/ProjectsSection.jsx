@@ -53,19 +53,14 @@ function ProjectsSection() {
       >
         <div className="magic-scanline" aria-hidden="true" />
 
-        <button
-          className="slider-arrow slider-arrow-prev"
-          type="button"
-          aria-label={'Предыдущий слайд'}
-          onClick={handlePrev}
-        >
+        <button className="slider-arrow slider-arrow-prev" type="button" aria-label="Предыдущий слайд" onClick={handlePrev}>
           <FaArrowLeft />
         </button>
 
         <div className="events-slider" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
           <AnimatePresence mode="wait">
             <motion.article
-              key={activeSlide.title}
+              key={activeSlide.id}
               className="event-slide magic-slide"
               style={{ backgroundImage: activeSlide.accent }}
               initial={{ opacity: 0, x: 42, scale: 0.985 }}
@@ -73,53 +68,55 @@ function ProjectsSection() {
               exit={{ opacity: 0, x: -42, scale: 0.985 }}
               transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
             >
-              {activeIndex === 0 ? (
+              {activeSlide.image ? (
                 <div className="event-slide__image-wrap">
-                  <img className="event-slide__image" src="/assets/Thetre.png" alt={'Театральная сцена ET ART'} />
-                </div>
-              ) : null}
-
-              {activeIndex === 2 ? (
-                <div className="event-slide__image-wrap">
-                  <img className="event-slide__image" src="/assets/Baner.png" alt={'Брендинг ET ART'} />
+                  <img
+                    className="event-slide__image"
+                    src={activeSlide.image}
+                    alt={activeSlide.alt}
+                    style={{
+                      '--slide-position': activeSlide.position ?? 'center center',
+                      '--slide-mobile-position': activeSlide.mobilePosition ?? activeSlide.position ?? 'center center',
+                    }}
+                  />
                 </div>
               ) : null}
 
               <div className="event-slide__glow" />
               <div className="magic-slide__shine" aria-hidden="true" />
 
-              <motion.div
-                className="event-slide__content"
-                initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                transition={{ duration: 0.22, delay: 0.03, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <h4>{activeSlide.title}</h4>
-                <p>{activeSlide.description}</p>
-              </motion.div>
+              {activeSlide.showText ? (
+                <motion.div
+                  className="event-slide__content"
+                  initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
+                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  transition={{ duration: 0.22, delay: 0.03, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <h4>{activeSlide.title}</h4>
+                  {activeSlide.description ? <p>{activeSlide.description}</p> : null}
+                </motion.div>
+              ) : null}
             </motion.article>
           </AnimatePresence>
 
           <div className="events-slider__dots" aria-label="Навигация по слайдам">
             {eventSlides.map((slide, index) => (
               <button
-                key={slide.title}
+                key={slide.id}
                 type="button"
                 className={`events-slider__dot${index === activeIndex ? ' is-active' : ''}`}
                 aria-label={`Перейти к слайду ${index + 1}`}
                 aria-pressed={index === activeIndex}
-                onClick={() => setActiveIndex(index)}
+                onClick={(event) => {
+                  event.currentTarget.blur();
+                  setActiveIndex(index);
+                }}
               />
             ))}
           </div>
         </div>
 
-        <button
-          className="slider-arrow slider-arrow-next"
-          type="button"
-          aria-label={'Следующий слайд'}
-          onClick={handleNext}
-        >
+        <button className="slider-arrow slider-arrow-next" type="button" aria-label="Следующий слайд" onClick={handleNext}>
           <FaArrowRight />
         </button>
       </motion.div>

@@ -12,117 +12,153 @@ import {
 export const advantages = [
   {
     icon: FaShieldHalved,
-    title: '\u041d\u0430\u0434\u0435\u0436\u043d\u0430\u044f \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f',
-    text: '\u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u043e\u043c\u0430\u043d\u0434\u0430 ET ART \u0441\u043e\u043f\u0440\u043e\u0432\u043e\u0436\u0434\u0430\u0435\u0442 \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u043e\u0442 \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0438 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0434\u043e \u0444\u0438\u043d\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u044b\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u0448\u043e\u0443.',
+    title: 'Надежная реализация',
+    text: 'Техническая команда ET ART сопровождает проекты от подготовки площадки до финального выключения шоу.',
   },
   {
     icon: FaLightbulb,
-    title: '\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d',
-    text: '\u0421\u0432\u0435\u0442, \u044d\u043a\u0440\u0430\u043d\u044b, \u0441\u0446\u0435\u043d\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u0438 \u0434\u0438\u043d\u0430\u043c\u0438\u043a\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0430 \u0441\u043e\u0431\u0438\u0440\u0430\u044e\u0442\u0441\u044f \u0432 \u0446\u0435\u043b\u044c\u043d\u0443\u044e \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0443\u044e \u0438\u0441\u0442\u043e\u0440\u0438\u044e \u0431\u0440\u0435\u043d\u0434\u0430.',
+    title: 'Визуальный продакшн',
+    text: 'Свет, экраны, сценография и динамика пространства собираются в цельную визуальную историю бренда.',
   },
   {
     icon: FaWaveSquare,
-    title: 'Event-tech \u044d\u0441\u0442\u0435\u0442\u0438\u043a\u0430',
-    text: '\u041c\u044b \u0434\u0435\u043b\u0430\u0435\u043c \u0442\u0435\u0445\u043d\u0438\u043a\u0443 \u0447\u0430\u0441\u0442\u044c\u044e \u0438\u043c\u0438\u0434\u0436\u0430 \u0441\u043e\u0431\u044b\u0442\u0438\u044f: \u0447\u0438\u0441\u0442\u043e, \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u0438 \u0441 \u043f\u0440\u0435\u043c\u0438\u0430\u043b\u044c\u043d\u044b\u043c \u0440\u0438\u0442\u043c\u043e\u043c.',
+    title: 'Event-tech эстетика',
+    text: 'Мы делаем технику частью имиджа события: чисто, современно и с премиальным ритмом.',
   },
   {
     icon: FaHeadset,
-    title: '\u041a\u043e\u043c\u0444\u043e\u0440\u0442\u043d\u043e\u0435 \u0432\u0435\u0434\u0435\u043d\u0438\u0435',
-    text: '\u041e\u0434\u0438\u043d \u043a\u043e\u043d\u0442\u0430\u043a\u0442 \u043d\u0430 \u043f\u0440\u043e\u0435\u043a\u0442, \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u0430\u044f \u043a\u043e\u043c\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u044f \u0438 \u0431\u044b\u0441\u0442\u0440\u043e\u0435 \u043f\u0440\u0438\u043d\u044f\u0442\u0438\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439.',
+    title: 'Комфортное ведение',
+    text: 'Один контакт на проект, прозрачная коммуникация и быстрое принятие технических решений.',
   },
 ];
 
 export const quickMenu = [
-  { label: '\u041a\u0442\u043e \u043c\u044b', href: '#about' },
-  { label: '\u041d\u0430\u0448\u0438 \u0440\u0430\u0431\u043e\u0442\u044b', href: '#projects' },
-  { label: '\u0412\u0438\u0437\u0443\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f', href: '#visualization' },
-  { label: '\u041e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435', href: '#equipment' },
-  { label: '\u041d\u0430\u0431\u043e\u0440\u044b \u0441\u0432\u0435\u0442\u0430 \u0438 \u0437\u0432\u0443\u043a\u0430', href: '#packages' },
-  { label: '\u041e\u0442\u0437\u044b\u0432\u044b', href: '#reviews' },
-  { label: '\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b', href: '#contacts' },
+  { label: 'Кто мы', href: '#about' },
+  { label: 'Наши работы', href: '#projects' },
+  { label: 'Визуализация', href: '#visualization' },
+  { label: 'Оборудование', href: '#equipment' },
+  { label: 'Наборы света и звука', href: '#packages' },
+  { label: 'Отзывы', href: '#reviews' },
+  { label: 'Контакты', href: '#contacts' },
 ];
 
 export const eventSlides = [
   {
-    title: '\u0424\u043e\u0440\u0443\u043c \u043d\u043e\u0432\u043e\u0433\u043e \u0431\u0440\u0435\u043d\u0434\u0430',
+    id: 'events-first',
+    title: 'Мероприятия',
     label: 'Conference / LED / Stage',
-    description: '\u041c\u043d\u043e\u0433\u043e\u0443\u0440\u043e\u0432\u043d\u0435\u0432\u0430\u044f \u0441\u0446\u0435\u043d\u0430, \u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u044d\u043a\u0440\u0430\u043d \u0438 \u0441\u0442\u0440\u043e\u0433\u0430\u044f \u0441\u0432\u0435\u0442\u043e\u0432\u0430\u044f \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0434\u043b\u044f \u0434\u0435\u043b\u043e\u0432\u043e\u0439 \u0430\u0443\u0434\u0438\u0442\u043e\u0440\u0438\u0438.',
+    description: '',
     accent: 'linear-gradient(135deg, rgba(17,31,52,.88), rgba(74,189,255,.35), rgba(0,0,0,.92))',
+    image: '/assets/portfolio/general/general-04.jpg',
+    alt: 'ET ART event project',
+    position: 'center center',
+    mobilePosition: '54% center',
+    showText: true,
   },
   {
-    title: '\u041d\u043e\u0447\u043d\u043e\u0439 \u0437\u0430\u043f\u0443\u0441\u043a \u043a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u0438',
+    id: 'events-second',
+    title: 'Мероприятия',
     label: 'Fashion / Moving Heads / Atmosphere',
-    description: '\u0422\u0435\u043c\u043d\u044b\u0439 \u0437\u0430\u043b, \u043a\u043e\u043d\u0442\u0440\u043e\u0432\u043e\u0439 \u0441\u0432\u0435\u0442, \u0434\u044b\u043c \u0438 \u0447\u0435\u0442\u043a\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0441\u043e \u0441\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0430\u043c\u0438.',
+    description: 'Деловые, концертные и камерные форматы с сильной визуальной подачей.',
     accent: 'linear-gradient(135deg, rgba(0,0,0,.95), rgba(0,118,184,.52), rgba(14,19,30,.95))',
+    image: '/assets/portfolio/general/general-16.jpg',
+    alt: 'ET ART stage event',
+    position: 'center center',
+    mobilePosition: '60% center',
+    showText: false,
   },
   {
-    title: 'Open-air \u043f\u043e\u0434 \u0431\u0440\u0435\u043d\u0434\u0438\u043d\u0433',
-    label: 'Outdoor / Sound / Screens',
-    description: '\u0423\u043b\u0438\u0447\u043d\u0430\u044f \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430 \u0441 \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0439 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0441\u0445\u0435\u043c\u043e\u0439 \u0438 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u043c \u0430\u043a\u0446\u0435\u043d\u0442\u043e\u043c \u043d\u0430 \u0431\u0440\u0435\u043d\u0434-\u043f\u043e\u0434\u043b\u043e\u0436\u043a\u0430\u0445.',
+    id: 'events-third',
+    title: 'Мероприятия',
+    label: 'Branding / Scene / Event',
+    description: 'Брендированные зоны, сцены и продакшн-решения для ярких проектов.',
     accent: 'linear-gradient(135deg, rgba(8,11,19,.94), rgba(75,198,255,.30), rgba(0,0,0,.9))',
+    image: '/assets/portfolio/branding/branding-02.jpg',
+    alt: 'ET ART branded event project',
+    position: 'center center',
+    mobilePosition: '52% center',
+    showText: false,
   },
 ];
 
 export const visualizationSlides = [
   {
-    title: '\u0421\u0432\u0435\u0442\u043e\u0432\u043e\u0439 \u0440\u0438\u0441\u0443\u043d\u043e\u043a \u0441\u0446\u0435\u043d\u044b',
+    id: 'visual-first',
+    title: '3D',
     label: 'Light Design / Stage',
-    description: '\u0413\u043b\u0443\u0431\u043e\u043a\u0438\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u0432\u043e\u0439 \u0441\u0432\u0435\u0442, \u0430\u043a\u0446\u0435\u043d\u0442\u043d\u044b\u0435 \u043b\u0443\u0447\u0438 \u0438 \u0447\u0438\u0441\u0442\u0430\u044f \u0433\u0435\u043e\u043c\u0435\u0442\u0440\u0438\u044f \u0441\u0446\u0435\u043d\u044b \u0434\u043b\u044f \u0441\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u0430\u0434\u0440\u0430.',
+    description: 'Предварительная 3D-проработка сцены, света и композиции проекта.',
     accent: 'linear-gradient(135deg, rgba(2,9,18,.96), rgba(61,185,255,.42), rgba(7,12,20,.96))',
+    image: '/assets/portfolio/3d/visualization-01.jpg',
+    alt: 'ET ART 3D visualization concept',
+    position: 'center center',
+    mobilePosition: '52% center',
+    showText: true,
   },
   {
-    title: '\u042d\u043a\u0440\u0430\u043d\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f',
+    id: 'visual-second',
+    title: '3D',
     label: 'LED / Content / Motion',
-    description: '\u042d\u043a\u0440\u0430\u043d \u043a\u0430\u043a \u0447\u0430\u0441\u0442\u044c \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b \u0441\u043e\u0431\u044b\u0442\u0438\u044f: \u0437\u0430\u0434\u043d\u0438\u043a\u0438, \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u043d\u044b\u0435 \u0437\u043e\u043d\u044b \u0438 \u044d\u0444\u0444\u0435\u043a\u0442 \u043f\u043e\u0433\u0440\u0443\u0436\u0435\u043d\u0438\u044f.',
+    description: 'Визуальная сборка пространства с экранами, сценой и световыми акцентами.',
     accent: 'linear-gradient(135deg, rgba(5,8,14,.94), rgba(31,130,255,.36), rgba(0,0,0,.96))',
+    image: '/assets/portfolio/3d/visualization-02.jpg',
+    alt: 'ET ART 3D stage project',
+    position: 'center center',
+    mobilePosition: '50% center',
+    showText: false,
   },
   {
-    title: '\u0418\u043c\u043c\u0435\u0440\u0441\u0438\u0432\u043d\u0430\u044f \u043f\u043e\u0434\u0430\u0447\u0430',
+    id: 'visual-third',
+    title: '3D',
     label: 'Space / Mood / Atmosphere',
-    description: '\u0421\u043e\u0431\u0438\u0440\u0430\u0435\u043c \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u0431\u0440\u0430\u0437 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 \u0441\u0432\u0435\u0442, \u0441\u0446\u0435\u043d\u0443, \u0434\u044b\u043c \u0438 \u0434\u0438\u043d\u0430\u043c\u0438\u043a\u0443 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0430.',
+    description: 'Еще до монтажа показываем, как будет выглядеть итоговая площадка.',
     accent: 'linear-gradient(135deg, rgba(0,0,0,.96), rgba(88,217,255,.26), rgba(9,16,24,.96))',
+    image: '/assets/portfolio/3d/visualization-03.jpg',
+    alt: 'ET ART 3D event visualization',
+    position: 'center center',
+    mobilePosition: '50% center',
+    showText: false,
   },
 ];
 
 export const equipmentCards = [
   {
-    title: '\u0421\u0446\u0435\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438',
-    description: '\u041f\u043e\u0434\u0438\u0443\u043c\u044b, \u0444\u0435\u0440\u043c\u044b, \u0441\u0446\u0435\u043d\u044b \u0438 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043a\u0430\u0440\u043a\u0430\u0441\u044b \u0434\u043b\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0433\u043e \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d\u0430.',
+    title: 'Сценические конструкции',
+    description: 'Подиумы, фермы, сцены и технические каркасы для безопасного продакшна.',
     tone: 'from-night',
     image: '/assets/equipment-stage.png',
     imageClass: 'equipment-card__image--stage',
   },
   {
-    title: '\u0417\u0432\u0443\u043a\u043e\u0432\u043e\u0435 \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435',
-    description: '\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0442\u044b \u0434\u043b\u044f \u0440\u0435\u0447\u0438, \u0448\u043e\u0443-\u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c \u0438 \u043c\u0443\u0437\u044b\u043a\u0430\u043b\u044c\u043d\u044b\u0445 \u0441\u0435\u0442\u043e\u0432 \u0441 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0439 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u043e\u0439.',
+    title: 'Звуковое оборудование',
+    description: 'Комплекты для речи, шоу-программ и музыкальных сетов с качественной настройкой.',
     tone: 'from-ice',
     image: '/assets/equipment-sound.png',
     imageClass: 'equipment-card__image--sound',
   },
   {
-    title: '\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0432\u0435\u0442',
-    description: 'Moving heads, wash, beam, spot \u0438 \u0430\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0430 \u0434\u043b\u044f \u043a\u043b\u0443\u0431\u043d\u044b\u0445, \u0434\u0435\u043b\u043e\u0432\u044b\u0445 \u0438 \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u043d\u044b\u0445 \u0444\u043e\u0440\u043c\u0430\u0442\u043e\u0432.',
+    title: 'Профессиональный свет',
+    description: 'Moving heads, wash, beam, spot и атмосфера для клубных, деловых и концертных форматов.',
     tone: 'from-cyan',
     image: '/assets/equipment-light.png',
     imageClass: 'equipment-card__image--light',
   },
   {
-    title: 'LED-\u044d\u043a\u0440\u0430\u043d\u044b',
-    description: '\u041c\u043e\u0434\u0443\u043b\u044c\u043d\u044b\u0435 \u044d\u043a\u0440\u0430\u043d\u044b \u0434\u043b\u044f \u0441\u0446\u0435\u043d\u044b, \u0437\u0430\u0434\u043d\u0438\u043a\u043e\u0432, \u0431\u0440\u0435\u043d\u0434-\u0437\u043e\u043d \u0438 \u0438\u043c\u043c\u0435\u0440\u0441\u0438\u0432\u043d\u044b\u0445 \u0438\u043d\u0441\u0442\u0430\u043b\u043b\u044f\u0446\u0438\u0439.',
+    title: 'LED-экраны',
+    description: 'Модульные экраны для сцены, задников, бренд-зон и иммерсивных инсталляций.',
     tone: 'from-steel',
     image: '/assets/equipment-screen.png',
     imageClass: 'equipment-card__image--screen',
   },
   {
-    title: '\u041c\u0443\u043b\u044c\u0442\u0438\u043c\u0435\u0434\u0438\u0430',
-    description: '\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438 \u0438 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0441\u0442\u043e\u0439\u043a\u0438 \u0434\u043b\u044f \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0439, \u0434\u0435\u043b\u043e\u0432\u044b\u0445 \u0437\u043e\u043d \u0438 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u044d\u043a\u0440\u0430\u043d\u043e\u0432.',
+    title: 'Мультимедиа',
+    description: 'Профессиональные панели и мобильные стойки для презентаций, деловых зон и информационных экранов.',
     tone: 'from-night',
     image: '/assets/equipment-display.png',
     imageClass: 'equipment-card__image--display',
   },
   {
-    title: '\u0411\u0440\u0435\u043d\u0434\u0438\u043d\u0433',
-    description: '\u0421\u0442\u0435\u043d\u0434\u044b, \u0431\u0440\u0435\u043d\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0437\u043e\u043d\u044b \u0438 \u0433\u043e\u0442\u043e\u0432\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0434\u043b\u044f \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0439, \u0432\u044b\u0441\u0442\u0430\u0432\u043e\u043a \u0438 \u043f\u0440\u043e\u043c\u043e-\u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0439.',
+    title: 'Брендинг',
+    description: 'Стенды, брендированные зоны и готовые решения для презентаций, выставок и промо-активаций.',
     tone: 'from-steel',
     image: '/assets/equipment-branding.png',
     imageClass: 'equipment-card__image--branding',
@@ -131,19 +167,19 @@ export const equipmentCards = [
 
 export const packages = [
   {
-    title: '\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440',
-    price: '45 000 \u20bd',
-    description: '\u0414\u043b\u044f \u043a\u0430\u043c\u0435\u0440\u043d\u044b\u0445 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439, \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0439, \u0447\u0430\u0441\u0442\u043d\u044b\u0445 \u0432\u0435\u0447\u0435\u0440\u043e\u0432 \u0438 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u0445 \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a.',
+    title: 'Минимальный набор',
+    price: '45 000 ₽',
+    description: 'Для камерных мероприятий, презентаций, частных вечеров и небольших площадок.',
   },
   {
-    title: '\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043d\u0430\u0431\u043e\u0440',
-    price: '85 000 \u20bd',
-    description: '\u0414\u043b\u044f \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043e\u0432, \u0431\u0440\u0435\u043d\u0434-\u0437\u043e\u043d, \u0441\u0432\u0430\u0434\u0435\u0431 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441\u043e \u0441\u0446\u0435\u043d\u043e\u0439 \u0441\u0440\u0435\u0434\u043d\u0435\u0433\u043e \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0430.',
+    title: 'Средний набор',
+    price: '85 000 ₽',
+    description: 'Для корпоративов, бренд-зон, свадеб и мероприятий со сценой среднего масштаба.',
   },
   {
-    title: '\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440',
-    price: '\u043e\u0442 140 000 \u20bd',
-    description: '\u0414\u043b\u044f \u043a\u0440\u0443\u043f\u043d\u044b\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u0439, \u0444\u043e\u0440\u0443\u043c\u043e\u0432, \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u043d\u044b\u0445 \u0441\u0435\u0442\u0430\u043f\u043e\u0432 \u0438 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u043e \u043d\u0430\u0441\u044b\u0449\u0435\u043d\u043d\u044b\u0445 \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a.',
+    title: 'Максимальный набор',
+    price: 'от 140 000 ₽',
+    description: 'Для крупных событий, форумов, концертных сетапов и визуально насыщенных площадок.',
   },
 ];
 
@@ -151,17 +187,17 @@ export const reviews = [
   {
     name: 'A. Mamedov',
     company: 'Private Event Producer',
-    text: 'ET ART \u0434\u0435\u0440\u0436\u0430\u0442 \u0442\u0435\u043c\u043f \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u043e \u0438 \u0443\u0432\u0435\u0440\u0435\u043d\u043d\u043e. \u041d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0435 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0442\u0441\u044f \u0432\u044b\u0441\u043e\u043a\u0438\u0439 \u043a\u043b\u0430\u0441\u0441 \u043a\u043e\u043c\u0430\u043d\u0434\u044b \u0438 \u0442\u0435\u0445\u043d\u0438\u043a\u0438.',
+    text: 'ET ART держат темп проекта спокойно и уверенно. На площадке чувствуется высокий класс команды и техники.',
   },
   {
     name: 'Brand Team Nova',
     company: 'Launch Event',
-    text: '\u0421\u0438\u043b\u044c\u043d\u0430\u044f \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u043f\u043e\u0434\u0430\u0447\u0430, \u0431\u044b\u0441\u0442\u0440\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0438 \u043e\u0447\u0435\u043d\u044c \u0447\u0438\u0441\u0442\u0430\u044f \u0444\u0438\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0430 \u043d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0435.',
+    text: 'Сильная визуальная подача, быстрые решения и очень чистая финальная картинка на площадке.',
   },
   {
     name: 'Event Hall Meridian',
     company: 'Venue Partner',
-    text: '\u041a\u043e\u043c\u0430\u043d\u0434\u0430 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f, \u0442\u0435\u0445\u043d\u0438\u0447\u043d\u0430\u044f \u0438 \u0431\u0435\u0440\u0435\u0436\u043d\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0441 \u043b\u043e\u043a\u0430\u0446\u0438\u0435\u0439. \u041d\u0430\u0434\u0435\u0436\u043d\u044b\u0439 \u043f\u0430\u0440\u0442\u043d\u0435\u0440 \u0434\u043b\u044f \u0441\u043b\u043e\u0436\u043d\u044b\u0445 \u043c\u043e\u043d\u0442\u0430\u0436\u0435\u0439.',
+    text: 'Команда дисциплинированная, техничная и бережно работает с локацией. Надежный партнер для сложных монтажей.',
   },
 ];
 
@@ -183,25 +219,25 @@ export const contacts = [
 ];
 
 export const metrics = [
-  { value: '120+', label: '\u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432' },
-  { value: '24/7', label: '\u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430' },
-  { value: '10+', label: '\u043b\u0435\u0442 event-tech \u043e\u043f\u044b\u0442\u0430' },
+  { value: '120+', label: 'реализованных проектов' },
+  { value: '24/7', label: 'техническая поддержка' },
+  { value: '10+', label: 'лет event-tech опыта' },
 ];
 
 export const socialHighlights = [
   {
     icon: FaRegHandshake,
-    title: '\u041e\u0442\u0437\u044b\u0432\u044b',
-    text: '\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u043d\u0430\u044f \u0440\u0435\u043f\u0443\u0442\u0430\u0446\u0438\u044f, \u0441\u043f\u043e\u043a\u043e\u0439\u043d\u044b\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441 \u0438 \u043f\u0440\u0435\u0434\u0441\u043a\u0430\u0437\u0443\u0435\u043c\u044b\u0439 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0435.',
+    title: 'Отзывы',
+    text: 'Подтвержденная репутация, спокойный процесс и предсказуемый результат на площадке.',
   },
   {
     icon: FaLayerGroup,
-    title: '\u041f\u0430\u0440\u0442\u043d\u0435\u0440\u0441\u0442\u0432\u0430',
-    text: '\u0420\u0430\u0431\u043e\u0442\u0430\u0435\u043c \u0441 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430\u043c\u0438, \u0430\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u0430\u043c\u0438 \u0438 \u0431\u0440\u0435\u043d\u0434\u0430\u043c\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u043c \u0432\u0430\u0436\u043d\u0430 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u044d\u0441\u0442\u0435\u0442\u0438\u043a\u0430.',
+    title: 'Партнерства',
+    text: 'Работаем с площадками, агентствами и брендами, которым важна техническая эстетика.',
   },
   {
     icon: FaHeadset,
-    title: '\u0421\u043e\u0446\u0441\u0435\u0442\u0438',
-    text: '\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u043c \u0437\u0430\u043a\u0443\u043b\u0438\u0441\u044c\u0435, \u0441\u0435\u0442\u0430\u043f\u044b \u0438 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u044f\u0437\u044b\u043a \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u0432 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0445 \u043a\u0430\u043d\u0430\u043b\u0430\u0445.',
+    title: 'Соцсети',
+    text: 'Показываем закулисье, сетапы и визуальный язык проектов в цифровых каналах.',
   },
 ];
