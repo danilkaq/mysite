@@ -21,7 +21,7 @@ function PartnersSection() {
         {partners.map((partner, index) => (
           <motion.div
             key={partner.name}
-            className="partner-tile magic-card magic-card--spotlight magic-card--drift"
+            className={`partner-tile magic-card magic-card--spotlight magic-card--drift ${partner.className ?? ''}`.trim()}
             variants={cardShiftVariants}
             custom={index}
           >
