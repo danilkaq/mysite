@@ -1190,15 +1190,17 @@ main {
 }
 
 .partners-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .partner-tile {
-  min-height: 126px;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  color: rgba(246, 251, 255, 0.84);
+  min-height: 174px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  color: #ffffff;
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1206,9 +1208,307 @@ main {
 }
 
 .partner-tile:hover {
-  color: #8fe6ff;
+  color: #ffffff;
   border-color: rgba(143, 230, 255, 0.28);
   transform: translateY(-6px);
+}
+
+.partner-logo {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.partner-logo__image {
+  width: 100%;
+  max-width: 220px;
+  max-height: 92px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.partner-logo--light {
+  width: auto;
+  padding: 12px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.partner-logo__wordmark,
+.partner-logo__subwordmark,
+.partner-logo__stacked,
+.partner-logo__pixel-word {
+  display: block;
+  color: #ffffff;
+}
+
+.partner-logo__wordmark {
+  font-size: clamp(1.4rem, 1.55vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+}
+
+.partner-logo__wordmark--wide {
+  font-size: clamp(1.05rem, 1.18vw, 1.45rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.partner-logo__subwordmark {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  opacity: 0.86;
+}
+
+.partner-logo--stadium {
+  gap: 14px;
+}
+
+.partner-logo__stadium-mark {
+  width: min(100%, 190px);
+  display: grid;
+  gap: 9px;
+}
+
+.partner-logo__stadium-arc {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 5px solid rgba(255, 255, 255, 0.94);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+}
+
+.partner-logo__stadium-pillars {
+  display: block;
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0 8px,
+      transparent 8px 16px
+    );
+}
+
+.partner-logo__stadium-base {
+  display: block;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  clip-path: polygon(0 100%, 100% 100%, 84% 0, 16% 0);
+}
+
+.partner-logo__stadium-base--left,
+.partner-logo__stadium-base--right {
+  width: 42%;
+}
+
+.partner-logo__stadium-base--center {
+  width: 34%;
+  justify-self: center;
+}
+
+.partner-logo__stadium-base--left {
+  justify-self: start;
+}
+
+.partner-logo__stadium-base--right {
+  justify-self: end;
+}
+
+.partner-logo--beeline,
+.partner-logo--otp,
+.partner-logo--luidor,
+.partner-logo--konsib {
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.partner-logo__beeline-ball {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background:
+    linear-gradient(140deg, #f6f6f6 0 26%, #191919 26% 42%, #f6f6f6 42% 60%, #171717 60% 78%, #ffffff 78% 100%);
+  box-shadow: inset -10px -10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.partner-logo--beeline .partner-logo__wordmark {
+  font-size: clamp(1.6rem, 1.8vw, 2.3rem);
+  font-weight: 500;
+}
+
+.partner-logo__luidor-mark {
+  width: 58px;
+  height: 58px;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  border-right-width: 8px;
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  position: relative;
+}
+
+.partner-logo__luidor-mark::before,
+.partner-logo__luidor-mark::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  width: 28px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.partner-logo__luidor-mark::before {
+  left: -2px;
+}
+
+.partner-logo__luidor-mark::after {
+  right: -2px;
+}
+
+.partner-logo__otp-mark {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.partner-logo__otp-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  border-right-color: transparent;
+}
+
+.partner-logo__otp-dot {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.partner-logo--iteco {
+  gap: 8px;
+}
+
+.partner-logo--iteco .partner-logo__wordmark {
+  font-size: clamp(2.5rem, 2.8vw, 3.4rem);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+
+.partner-logo--pari .partner-logo__wordmark {
+  font-size: clamp(2.7rem, 3vw, 3.8rem);
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.partner-logo--nizhseti {
+  gap: 14px;
+}
+
+.partner-logo__nizh-grid {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.partner-logo__nizh-grid span {
+  display: block;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+}
+
+.partner-logo__stacked {
+  font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.partner-logo__konsib-mark {
+  width: 24px;
+  height: 62px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92));
+  clip-path: polygon(100% 0, 100% 100%, 0 74%);
+}
+
+.partner-logo--prifest .partner-logo__pixel-word {
+  font-size: clamp(1.35rem, 1.45vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+.partner-logo--gazprom {
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.partner-logo__gazprom-mark {
+  position: relative;
+  width: 56px;
+  height: 80px;
+}
+
+.partner-logo__gazprom-flame {
+  position: absolute;
+  inset: 0 10px 14px;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  border-radius: 50% 50% 55% 55% / 70% 70% 35% 35%;
+}
+
+.partner-logo__gazprom-drop {
+  position: absolute;
+  left: 22px;
+  bottom: 0;
+  width: 10px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+}
+
+.partner-logo__gazprom-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.partner-logo--gazprom .partner-logo__wordmark {
+  font-size: clamp(1.45rem, 1.65vw, 2.15rem);
+}
+
+.partner-logo--gazprom .partner-logo__subwordmark {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 1280px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .contact-section {
@@ -1665,6 +1965,10 @@ main {
   .partners-grid,
   .contact-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-tile {
+    min-height: 164px;
   }
 
   .contact-social-strip__links {
@@ -4551,9 +4855,66 @@ body.mobile-menu-open {
   }
 
   .partner-tile {
-    min-height: 104px;
-    font-size: 0.98rem;
+    min-height: 148px;
     text-align: center;
+  }
+
+  .partner-logo {
+    gap: 8px;
+  }
+
+  .partner-logo__image {
+    max-width: 190px;
+    max-height: 78px;
+  }
+
+  .partner-logo--beeline,
+  .partner-logo--otp,
+  .partner-logo--luidor,
+  .partner-logo--konsib,
+  .partner-logo--gazprom {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .partner-logo__wordmark--wide {
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+  }
+
+  .partner-logo__stadium-mark {
+    width: min(100%, 150px);
+  }
+
+  .partner-logo__beeline-ball,
+  .partner-logo__otp-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .partner-logo__luidor-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .partner-logo__konsib-mark {
+    height: 52px;
+  }
+
+  .partner-logo__nizh-grid {
+    width: 64px;
+    height: 64px;
+  }
+
+  .partner-logo--iteco .partner-logo__wordmark,
+  .partner-logo--pari .partner-logo__wordmark {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+  }
+
+  .partner-logo--gazprom .partner-logo__subwordmark {
+    max-width: 22ch;
+    line-height: 1.35;
   }
 
   .contact-section {

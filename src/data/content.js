@@ -38,7 +38,7 @@ export const quickMenu = [
   { label: 'Визуализация', href: '#visualization' },
   { label: 'Оборудование', href: '#equipment' },
   { label: 'Наборы света и звука', href: '#packages' },
-  { label: 'Отзывы', href: '#reviews' },
+  { label: 'С кем сотрудничаем', href: '#partners' },
   { label: 'Контакты', href: '#contacts' },
 ];
 
@@ -202,12 +202,16 @@ export const reviews = [
 ];
 
 export const partners = [
-  'Meridian Hall',
-  'Nova Brand',
-  'Skyline Events',
-  'Velour Group',
-  'Atlas Media',
-  'Pulse Agency',
+  { name: 'Стадион Нижний Новгород', image: '/assets/portfolio/Бренды/stadium.png' },
+  { name: 'билайн', image: '/assets/portfolio/Бренды/bilain.png' },
+  { name: 'Луидор', image: '/assets/portfolio/Бренды/luidor.png' },
+  { name: 'ОТП Банк', image: '/assets/portfolio/Бренды/opt.png' },
+  { name: 'ITECO', image: '/assets/portfolio/Бренды/iteco.png' },
+  { name: 'PARI', image: '/assets/portfolio/Бренды/pari.png' },
+  { name: 'Нижсети', image: '/assets/portfolio/Бренды/image.png' },
+  { name: 'Консиб', image: '/assets/portfolio/Бренды/konsib.png' },
+  { name: 'Горький Fest', image: '/assets/portfolio/Бренды/gorekyfest.png', panel: 'light' },
+  { name: 'Газпром трансгаз Нижний Новгород', image: '/assets/portfolio/Бренды/gazprom.png' },
 ];
 
 export const contacts = [
