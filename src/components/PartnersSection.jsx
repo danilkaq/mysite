@@ -29,7 +29,9 @@ function PartnersSection() {
           >
             <span className="magic-card__beam" aria-hidden="true" />
             <div
-              className={`partner-logo${partner.panel ? ` partner-logo--${partner.panel}` : ''}`}
+              className={`partner-logo${partner.panel ? ` partner-logo--${partner.panel}` : ''}${
+                partner.logoClass ? ` partner-logo--${partner.logoClass}` : ''
+              }`}
               aria-label={partner.name}
             >
               <img className="partner-logo__image" src={partner.image} alt={partner.name} loading="lazy" />

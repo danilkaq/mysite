@@ -37,7 +37,6 @@ export const quickMenu = [
   { label: 'Наши работы', href: '#projects' },
   { label: 'Визуализация', href: '#visualization' },
   { label: 'Оборудование', href: '#equipment' },
-  { label: 'Наборы света и звука', href: '#packages' },
   { label: 'С кем сотрудничаем', href: '#partners' },
   { label: 'Контакты', href: '#contacts' },
 ];
@@ -210,15 +209,14 @@ export const partners = [
   { name: 'PARI', image: '/assets/portfolio/Бренды/pari.png' },
   { name: 'Нижсети', image: '/assets/portfolio/Бренды/image.png' },
   { name: 'Консиб', image: '/assets/portfolio/Бренды/konsib.png' },
-  { name: 'Горький Fest', image: '/assets/portfolio/Бренды/gorekyfest.png', panel: 'light' },
-  { name: 'Газпром трансгаз Нижний Новгород', image: '/assets/portfolio/Бренды/gazprom.png' },
+  { name: 'Горький Fest', image: '/assets/portfolio/Бренды/gorekyfest.png', panel: 'light', logoClass: 'gorkyfest' },
+  { name: 'Газпром трансгаз Нижний Новгород', image: '/assets/portfolio/Бренды/gazprom.png', logoClass: 'gazprom' },
 ];
 
 export const contacts = [
   { label: 'Telegram', value: '@etart_event', href: 'https://t.me/etart_event' },
-  { label: 'Instagram', value: '@etart.production', href: 'https://instagram.com/etart.production' },
   { label: 'VK', value: 'vk.com/etart.production', href: 'https://vk.com/etart.production' },
-  { label: 'WhatsApp', value: '+7 (999) 123-45-67', href: 'https://wa.me/79991234567' },
+  { label: 'MAX', value: 'MAX', href: 'https://max.ru/', icon: '/assets/portfolio/Бренды/Max_logo-1024x1024.png' },
   { label: 'Email', value: 'hello@etart.pro', href: 'mailto:hello@etart.pro' },
 ];
 

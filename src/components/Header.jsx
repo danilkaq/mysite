@@ -12,7 +12,7 @@ function TelegramIcon() {
   );
 }
 
-const desktopMenuOrder = ['#about', '#packages', '#projects', '#equipment', '#contacts'];
+const desktopMenuOrder = ['#about', '#projects', '#equipment', '#contacts'];
 
 const headerMenu = desktopMenuOrder
   .map((href) => quickMenu.find((item) => item.href === href))

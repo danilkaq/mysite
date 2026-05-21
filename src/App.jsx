@@ -7,7 +7,6 @@ import WhyUsSection from './components/WhyUsSection';
 import ProjectsSection from './components/ProjectsSection';
 import VisualizationSection from './components/VisualizationSection';
 import EquipmentSection from './components/EquipmentSection';
-import PackagesSection from './components/PackagesSection';
 import PartnersSection from './components/PartnersSection';
 import ContactSection from './components/ContactSection';
 import './styles/app.css';
@@ -25,7 +24,6 @@ function App() {
           <ProjectsSection />
           <VisualizationSection />
           <EquipmentSection />
-          <PackagesSection />
           <PartnersSection />
           <ContactSection />
         </main>

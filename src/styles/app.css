@@ -1192,14 +1192,16 @@ main {
 .partners-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: stretch;
+  grid-auto-rows: 1fr;
+  gap: 14px;
 }
 
 .partner-tile {
-  min-height: 174px;
+  min-height: 168px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 20px;
+  padding: 22px;
   color: #ffffff;
   transition:
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1214,31 +1216,47 @@ main {
 }
 
 .partner-logo {
-  width: 100%;
+  width: min(100%, 220px);
+  height: 92px;
   display: grid;
   justify-items: center;
   align-items: center;
-  gap: 10px;
   text-align: center;
 }
 
 .partner-logo__image {
   width: 100%;
-  max-width: 220px;
-  max-height: 92px;
+  height: 100%;
   display: block;
   object-fit: contain;
   object-position: center;
 }
 
 .partner-logo--light {
-  width: auto;
-  padding: 12px 16px;
+  width: min(100%, 220px);
+  height: 92px;
+  padding: 10px 14px;
+  box-sizing: border-box;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.08);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.08),
     0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.partner-logo--gorkyfest {
+  overflow: hidden;
+}
+
+.partner-logo--gorkyfest .partner-logo__image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 74px;
+}
+
+.partner-logo--gazprom .partner-logo__image {
+  transform: translate(10px, -18px);
 }
 
 .partner-logo__wordmark,
@@ -1511,7 +1529,12 @@ main {
   }
 }
 
+.content-section--partners {
+  padding-bottom: 42px;
+}
+
 .contact-section {
+  padding-top: 44px;
   padding-bottom: 56px;
 }
 
@@ -1731,14 +1754,33 @@ main {
   min-width: 220px;
 }
 
+.contact-form__submit:disabled {
+  opacity: 0.74;
+  cursor: wait;
+}
+
+.contact-form__error {
+  margin: 14px 0 0;
+  color: #ffb2b2;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .contact-social-strip {
   display: grid;
   gap: 16px;
   width: 100%;
-  padding: 18px 20px;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+    radial-gradient(circle at 68% 0%, rgba(66, 183, 255, 0.11), transparent 42%),
+    rgba(255, 255, 255, 0.018);
+  border: 1px solid rgba(143, 230, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 20px 42px rgba(4, 10, 18, 0.16);
 }
 
 .contact-social-strip h3 {
@@ -1750,10 +1792,10 @@ main {
 
 .contact-social-strip__links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  grid-template-columns: repeat(3, minmax(132px, 1fr));
   align-items: stretch;
   justify-content: stretch;
-  gap: 10px;
+  gap: 14px;
   width: 100%;
 }
 
@@ -1763,13 +1805,16 @@ main {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 116px;
+  min-height: 112px;
   width: 100%;
   padding: 18px 14px;
   border-radius: 22px;
   color: rgba(246, 251, 255, 0.86);
-  background: transparent;
-  border: 0;
+  background: rgba(8, 13, 20, 0.42);
+  border: 1px solid rgba(143, 230, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 14px 28px rgba(4, 10, 18, 0.12);
   transition:
     transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.28s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1780,13 +1825,32 @@ main {
   font-size: 1.3rem;
 }
 
+.contact-social-strip__links a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: drop-shadow(0 8px 18px rgba(66, 183, 255, 0.2));
+}
+
 .contact-social-strip__links a span {
   text-align: center;
 }
 
+.contact-social-strip__link--max {
+  background: rgba(8, 13, 20, 0.42) !important;
+}
+
+.contact-social-strip__link--max img {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 7px !important;
+}
+
 .contact-social-strip__links a:hover {
   color: #8fe6ff;
-  background: rgba(66, 183, 255, 0.04);
+  background: rgba(66, 183, 255, 0.06);
+  border-color: rgba(143, 230, 255, 0.2);
   transform: translateY(-2px);
 }
 
@@ -1794,7 +1858,7 @@ main {
   display: grid;
   gap: 22px;
   width: 100%;
-  margin-top: 24px;
+  margin-top: 0;
   padding: 26px 28px;
   border-radius: 30px;
   background:
@@ -4739,6 +4803,10 @@ body.mobile-menu-open {
     box-sizing: border-box;
   }
 
+  .content-section--partners {
+    padding-bottom: 28px !important;
+  }
+
   .section-heading,
   .about-heading,
   .why-us-heading {
@@ -4855,17 +4923,28 @@ body.mobile-menu-open {
   }
 
   .partner-tile {
-    min-height: 148px;
+    min-height: 144px;
     text-align: center;
   }
 
   .partner-logo {
-    gap: 8px;
+    width: min(100%, 190px);
+    height: 78px;
   }
 
   .partner-logo__image {
-    max-width: 190px;
-    max-height: 78px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .partner-logo--gorkyfest .partner-logo__image {
+    width: auto;
+    height: auto;
+    max-height: 64px;
+  }
+
+  .partner-logo--gazprom .partner-logo__image {
+    transform: translate(7px, -14px);
   }
 
   .partner-logo--beeline,
@@ -4918,6 +4997,7 @@ body.mobile-menu-open {
   }
 
   .contact-section {
+    padding-top: 34px;
     padding-bottom: 52px;
   }
 
@@ -4928,7 +5008,7 @@ body.mobile-menu-open {
   }
 
   .contact-social-strip__links {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
@@ -4953,11 +5033,13 @@ body.mobile-menu-open {
   }
 
   .contact-social-strip__links a {
-    min-height: 108px;
-    aspect-ratio: 1 / 1;
-    padding: 14px 10px;
+    min-height: 74px;
+    aspect-ratio: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 16px 18px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(8, 13, 20, 0.42);
   }
 
   .contact-field input,
